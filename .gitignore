@@ -13,6 +13,7 @@ expo-env.d.ts
 .kotlin/
 *.orig.*
 *.jks
+*.keystore
 *.p8
 *.p12
 *.key
@@ -30,13 +31,25 @@ yarn-error.*
 .DS_Store
 *.pem
 
-# local env files
+# local env files (real values live here — commit only the .env.example files)
+.env
 .env*.local
+
+# AI assistant instruction files — kept locally, not published
+CLAUDE.md
+AGENTS.md
+
+# personal Claude Code settings (settings.json is shared and stays tracked)
+.claude/settings.local.json
+
+# logs
+*.log
+
+# Windows
+Thumbs.db
 
 # typescript
 *.tsbuildinfo
-
-example
 
 # generated native folders
 /ios

@@ -1,0 +1,10 @@
+const router = require("express").Router();
+const auth = require("../middleware/auth");
+const c = require("../controllers/note");
+router.use(auth);
+router.get("/", c.list);
+router.post("/", c.createAndSummarize);
+router.get("/:id", c.get);
+router.post("/:id/summarize", c.summarize);
+router.delete("/:id", c.remove);
+module.exports = router;
